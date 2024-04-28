@@ -1,0 +1,38 @@
+.footer {
+  margin-bottom: 30px;
+
+  @media(max-width: 510px) {
+    margin-bottom: 15px;
+  }
+
+  &__wrapper {
+    @include flex(space-between);
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 30px;
+
+    @media(max-width: 510px) {
+      padding-top: 15px;
+    }
+    
+    @media(max-width: 510px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    opacity: 0.5;
+
+    @media(max-width: 768px) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @media(max-width: 510px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhattan</title>
+  <link rel="stylesheet" href="./css/index.min.css">
+  <script defer src="./scripts/swiper.js"></script>
+  <script defer src="./scripts/main.js"></script>
+</head>
+<body>
+  <div class="body__wrapper">
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="header__logo-link">
+          <picture>
+            <source srcset="./img/header-logo.webp" type="image/webp">
+            <img src="./img/header-logo.png" alt="Логотип" loading="lazy" width="158" height="40">
+          </picture>
+        </a>
+        
+        <nav class="header__nav">
+          <ul class="header__list" id="menu">
+            <li class="header__item">
+              <a href="#" class="header__item__link">Главная</a>
+            </li>
+
+            <li class="header__item">
+              <a href="./poster.html" class="header__item__link">Афиша</a>
+            </li>
+
+            <li class="header__item">
+              <a href="./events.html" class="header__item__link">Корпоративы</a>
+            </li>
+
+            <li class="header__item">
+              <a href="./gallery.html" class="header__item__link">Галерея</a>
+            </li>
+
+            <li class="header__item">
+              <a href="./news.html" class="header__item__link">Новости</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div href="#" class="header__btn-link modal__button1">бронирование</div>
+
+        <div class="header__burger" id="burger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+    <main>
+
+      <h1 style="display: none;">Manhattan club and bar</h1>
+
+      <secton class="modal modal1">
+        <div class="modal__main">
+          <h2 class="modal__title">Бронирование столика</h2>
+
+          <p>Бронируйте столик онлайн и получите бокал вина «Шато Тамань» из авторской коллекции бесплатно</p>
+
+          <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+            <fieldset>
+              <input type="date" class="modal__data" required>
+
+              <input type="time" class="modal__time" required>
+
+              <label for="name" >
+                <input type="text" id="name" placeholder="Имя" required>
+              </label>
+
+              <label for="tel">
+                <input type="tel" id="tel" placeholder="Телефон" required>
+              </label>
+            </fieldset>
+
+            <button class="submit" type="submit">Отправить</button>
+          </form>
+
+          <button class="modal__close">&#10006</button>
+        </div>
+      </secton>
+
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__block-1">
+            <picture>
+              <source srcset="./img/hero-img.webp" type="image/webp">
+              <img src="./img/header-logo.png" alt="Фото бара изнутри" loading="lazy" width="856" height="540">
+            </picture>
+
+            <div class="hero__based">Since 1996</div>
+
+            <h2 class="hero__title">True. Fontanka. Underground. </h2>
+          </div>
+
+          <div class="hero__block-2">
+            <ul class="tabs__container">
+              <li data-tab="tab-1" class="tab__title">Ближайшие</li>
+              <li data-tab="tab-2" class="tab__title">Скоро</li>
+            </ul>
+              
+            <div class="tabs__wrapper">
+              <div class="tab__content hidden-tab-content" id="tab-1">
+                <picture>
+                  <source srcset="./img/hero-tab-1.webp" type="image/webp">
+                  <img src="./img/hero-tab-1.png" alt="Обложка концерта" loading="lazy" width="160" height="200">
+                </picture>
+
+                <picture>
+                  <source srcset="./img/hero-tab-2.webp" type="image/webp">
+                  <img src="./img/hero-tab-2.png" alt="Обложка концерта" loading="lazy" width="160" height="200">
+                </picture>
+
+                <picture>
+                  <source srcset="./img/hero-tab-3.webp" type="image/webp">
+                  <img src="./img/hero-tab-3.png" alt="Обложка концерта" loading="lazy" width="160" height="200">
+                </picture>
+
+                <picture>
+                  <source srcset="./img/hero-tab-4.webp" type="image/webp">
+                  <img src="./img/hero-tab-4.png" alt="Обложка концерта" loading="lazy" width="160" height="200">
+                </picture>
+              </div>
+
+              <div class="tab__content hidden-tab-content" id="tab-2">
+                <picture>
+                  <source srcset="./img/hero-tab-5.webp" type="image/webp">
+                  <img src="./img/hero-tab-5.jpg" alt="Обложка концерта" loading="lazy" width="160" height="200">
+                </picture>
+
+                <picture>
+                  <source srcset="./img/hero-tab-6.webp" type="image/webp">
+                  <img src="./img/hero-tab-6.webp" alt="Обложка концерта" loading="lazy" width="160" height="200">
+                </picture>
+
+                <picture>
+                  <source srcset="./img/hero-tab-7.webp" type="image/webp">
+                  <img src="./img/hero-tab-7.webp" alt="Обложка концерта" loading="lazy" width="160" height="200">
+                </picture>
+
+                <picture>
+                  <source srcset="./img/hero-tab-8.webp" type="image/webp">
+                  <img src="./img/hero-tab-8.jpg" alt="Обложка концерта" loading="lazy" width="160" height="200">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="menu">
+        <div class="container">
+          <div class="menu__subtitle">Top “Manhattan” menu</div>
+
+          <h2 class="menu__title">Кухня</h2>
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide__cards"> 
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-1.webp" type="image/webp">
+                      <img src="./img/menu-1.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Рамэн с курицей</div>
+
+                        <div class="slide__description__title__price">400 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">300 гр</div>
+
+                      <p class="slide__description__text">Блюдо азиатской кухни, которое готовят из пшеничной лапши и куриного бульона.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-2.webp" type="image/webp">
+                      <img src="./img/menu-2.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Омлет с трюфелем</div>
+
+                        <div class="slide__description__title__price">350 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">220 гр</div>
+
+                      <p class="slide__description__text">Пушистый омлет, наполненный ароматом трюфелей, - это роскошный завтрак.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-3.webp" type="image/webp">
+                      <img src="./img/menu-3.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Яйца пашот</div>
+
+                        <div class="slide__description__title__price">375 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">175 гр</div>
+
+                      <p class="slide__description__text">Нежные яйца пашот, сваренные до совершенства, - это изысканный завтрак.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-4.webp" type="image/webp">
+                      <img src="./img/menu-4.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Яйцо карри</div>
+
+                        <div class="slide__description__title__price">410 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">260 гр</div>
+
+                      <p class="slide__description__text">Яйцо карри - ароматное блюдо из яиц, сваренных в густом и пряном соусе карри.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide__cards"> 
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-5.webp" type="image/webp">
+                      <img src="./img/menu-5.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Пирожное с ягодами</div>
+
+                        <div class="slide__description__title__price">230 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">150 гр</div>
+
+                      <p class="slide__description__text">Десерт, состоящий из нежного бисквита, покрытого слоем ягод и взбитых сливок.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-6.webp" type="image/webp">
+                      <img src="./img/menu-6.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Запеченные овощи</div>
+
+                        <div class="slide__description__title__price">325 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">180 гр</div>
+
+                      <p class="slide__description__text">Ароматные запеченные овощи, идеальный гарнир или легкая закуска.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-7.webp" type="image/webp">
+                      <img src="./img/menu-7.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Бургер с крабом</div>
+
+                        <div class="slide__description__title__price">375 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">175 гр</div>
+
+                      <p class="slide__description__text">Сочный крабовый бургер с хрустящей корочкой и нежным мясом краба.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-8.webp" type="image/webp">
+                      <img src="./img/menu-8.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Двойной бургер</div>
+
+                        <div class="slide__description__title__price">410 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">260 гр</div>
+
+                      <p class="slide__description__text">Двойное наслаждение сочными котлетами, сыром и овощами на мягкой булочке.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide__cards"> 
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-3.webp" type="image/webp">
+                      <img src="./img/menu-3.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Яйца пашот</div>
+
+                        <div class="slide__description__title__price">375 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">175 гр</div>
+
+                      <p class="slide__description__text">Нежные яйца пашот, сваренные до совершенства, - это изысканный завтрак.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-4.webp" type="image/webp">
+                      <img src="./img/menu-4.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Яйцо карри</div>
+
+                        <div class="slide__description__title__price">410 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">260 гр</div>
+
+                      <p class="slide__description__text">Яйцо карри - ароматное блюдо из яиц, сваренных в густом и пряном соусе карри.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-1.webp" type="image/webp">
+                      <img src="./img/menu-1.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Рамэн с курицей</div>
+
+                        <div class="slide__description__title__price">400 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">300 гр</div>
+
+                      <p class="slide__description__text">Блюдо азиатской кухни, которое готовят из пшеничной лапши и куриного бульона.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-2.webp" type="image/webp">
+                      <img src="./img/menu-2.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Омлет с трюфелем</div>
+
+                        <div class="slide__description__title__price">350 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">220 гр</div>
+
+                      <p class="slide__description__text">Пушистый омлет, наполненный ароматом трюфелей, - это роскошный завтрак.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide__cards">
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-7.webp" type="image/webp">
+                      <img src="./img/menu-7.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Бургер с крабом</div>
+
+                        <div class="slide__description__title__price">375 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">175 гр</div>
+
+                      <p class="slide__description__text">Сочный крабовый бургер с хрустящей корочкой и нежным мясом краба.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-8.webp" type="image/webp">
+                      <img src="./img/menu-8.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Двойной бургер</div>
+
+                        <div class="slide__description__title__price">410 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">260 гр</div>
+
+                      <p class="slide__description__text">Двойное наслаждение сочными котлетами, сыром и овощами на мягкой булочке.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-5.webp" type="image/webp">
+                      <img src="./img/menu-5.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Пирожное с ягодами</div>
+
+                        <div class="slide__description__title__price">230 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">150 гр</div>
+
+                      <p class="slide__description__text">Десерт, состоящий из нежного бисквита, покрытого слоем ягод и взбитых сливок.</p>
+                    </div>
+                  </div>
+
+                  <div class="slide__card">
+                    <picture>
+                      <source srcset="./img/menu-6.webp" type="image/webp">
+                      <img src="./img/menu-6.png" alt="Блюдо из меню" loading="lazy" width="110" height="110">
+                    </picture>
+
+                    <div class="slide__description">
+                      <div class="slide__description__title">
+                        <div class="slide__description__title__text">Запеченные овощи</div>
+
+                        <div class="slide__description__title__price">325 ₽</div>
+                      </div>
+
+                      <div class="slide__description__weight">180 гр</div>
+
+                      <p class="slide__description__text">Ароматные запеченные овощи, идеальный гарнир или легкая закуска.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="banquets">
+        <div class="container banquets__container">
+          <article class="banquets__block-text">
+            <div class="banquets__subtitle">Top “Manhattan” events</div>
+
+            <h2 class="banquets__title">Банкеты</h2>
+
+            <div class="banquets__description">
+              <p>На банкете в баре гости наслаждаются изысканными коктейлями и изысканной кухней в уютной атмосфере. Звуки приятной музыки и беседы наполняют воздух, создавая неповторимую атмосферу веселья и радости.</p>
+
+              <p>Приглашенные наслаждаются бесконечными разговорами, делятся впечатлениями и создают яркие воспоминания.</p>
+
+              <p>Бармены и персонал заботятся о комфорте каждого гостя, делая этот вечер незабываемым.</p>
+            </div>
+
+            <a class="banquets__link banquets__link_bottom" href="./events.html">Подробнее</a>
+          </article>
+
+          <picture>
+            <source srcset="./img/banquets-img.webp" type="image/webp">
+            <img src="./img/banquets-img.png" alt="Фото бара изнутри" loading="lazy" width="416" height="560">
+          </picture>
+
+          <article class="banquets__block-text banquets__block-text_tourists">
+            <div class="banquets__subtitle">“Manhattan” for tourists</div>
+
+            <h2 class="banquets__title">Туристы</h2>
+
+            <div class="banquets__description">
+              <p>В этом баре каждый посетитель находит что-то особенное. От классических коктейлей до местных специальностей. Этот замечательный бар предлагает широкий выбор напитков для удовлетворения любого вкуса.</p>
+
+              <p>Уникальная атмосфера и дружелюбный персонал создают идеальную обстановку для отдыха и знакомства с местной культурой.</p>
+
+              <p>Туристы могут наслаждаться аутентичным опытом и наслаждаясь атмосферой приключений в этом удивительном баре.</p>
+            </div>
+
+            <a class="banquets__link" href="#">Подробнее</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="rider">
+        <div class="container">
+          <div class="rider__subtitle">Top “Manhattan” party</div>
+
+          <h2 class="rider__title">Техрайдер</h2>
+
+          <div class="rider__flex">
+            <div class="accordeon">
+              <div class="box">
+                <div class="label">Loudspeakers</div>
+
+                <div class="content">
+                  <ul>
+                    <li>Acoustic system BELL Top 600W x 2</li>
+                    <li>Acoustic system BELL Mid 600W x 2</li>
+                    <li>Acoustic system BELL Sub 1000W x 2</li>
+                    <li>Front monitor Yamaha SM12V 300w x 2</li>
+                    <li>Backside monitor Dynacord 500W x 2</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="label">Amplifier</div>
+
+                <div class="content">
+                  <ul>
+                    <li>Pass Labs XA 200.5</li>
+                    <li>Pass Labs XSS 210.5</li>
+                    <li>Passed Labs XWS 205.5</li>
+                    <li>Pass Labs XSA 220</li>
+                    <li>Pass  XSWS 255</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="label">FOH</div>
+
+                <div class="content">
+                  <ul>
+                    <li>20 – 30000 Гц</li>
+                    <li>30 – 35000 Гц</li>
+                    <li>35 – 40000 Гц</li>
+                    <li>38 – 42000 Гц</li>
+                    <li>56 – 61000 Гц</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="label">Backline</div>
+
+                <div class="content">
+                  <ul>
+                    <li>Live Backline Music Performance</li>
+                    <li>Backline Music Equipment Rental</li>
+                    <li>Backline Music Stage Setup</li>
+                    <li>Professional Backline Music Gear</li>
+                    <li>Backline Music Instrument Setup</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="label">Microphone set</div>
+
+                <div class="content">
+                  <ul>
+                    <li>Microphone Set Installation Services</li>
+                    <li>Wireless Microphone Set Setup</li>
+                    <li>Professional Microphone Set Package</li>
+                    <li>Microphone Set Rental Options</li>
+                    <li>Compact Microphone Set Design</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="label">DJ equipment</div>
+
+                <div class="content">
+                  <ul>
+                    <li>State-of-the-Art DJ Equipment Rental</li>
+                    <li>Professional DJ Equipment Setup</li>
+                    <li>DJ Equipment Maintenance Services</li>
+                    <li>Premium DJ Equipment Packages</li>
+                    <li>Versatile DJ Equipment Selection</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="rider__block-2">
+              <h3 class="rider__title-3">Звукорежиссеры клуба Манхеттен</h3>
+
+              <div class="rider__img__block">
+                <div class="rider__img">
+                  <figure>
+                    <picture>
+                      <source srcset="./img/rider-img-1.webp" type="image/webp">
+                      <img src="./img/rider-img-1.png" alt="Фото звукорежиссера" loading="lazy" width="196" height="210">
+                    </picture>
+  
+                    <figcaption>Изотов Константин</figcaption>
+                  </figure>
+  
+                  <div class="rider__img__social">
+                    <a href="#">
+                      <svg width="20" height="12">
+                        <use xlink:href="./img/svg-sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+  
+                    <a href="#">
+                      <svg width="18" height="14">
+                        <use xlink:href="./img/svg-sprite.svg#telegram"></use>
+                      </svg>
+                    </a> 
+                  </div>
+                </div>
+
+                <div class="rider__img">
+                  <figure>
+                    <picture>
+                      <source srcset="./img/rider-img-2.webp" type="image/webp">
+                      <img src="./img/rider-img-2.png" alt="Фото звукорежиссера" loading="lazy" width="196" height="210">
+                    </picture>
+  
+                    <figcaption>Давид Хозиев</figcaption>
+                  </figure>
+  
+                  <div class="rider__img__social">
+                    <a href="#">
+                      <svg width="20" height="12">
+                        <use xlink:href="./img/svg-sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+  
+                    <a href="#">
+                      <svg width="18" height="14">
+                        <use xlink:href="./img/svg-sprite.svg#telegram"></use>
+                      </svg>
+                    </a> 
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="contacts">
+        <div class="container">
+          <div class="contacts__subtitle">Top “Manhattan” place</div>
+
+          <h2 class="contacts__title">контакты</h2>
+
+          <div class="contacts__flex">
+            <div class="contacts__data">
+              <div class="contacts__data__block">
+                <div class="contacts__data__title">Адрес</div>
+
+                <div class="contacts__data__text">Набережная реки Фонтанки, 90 (вход в арке с белыми колоннами)</div>
+
+                <div class="contacts__data__title">Телефон</div>
+
+                <div class="contacts__data__text">
+                  <a href="tel:+7 812 713-1945">+7 (812) 713-1945</a>
+                </div>
+
+                <div class="contacts__data__title">Режим работы</div>
+
+                <div class="contacts__data__text">Ежедневно с 12:00 до 06:00</div>
+              </div>
+
+              <div class="contacts__data__block">
+                <div class="contacts__data__title">Директор</div>
+
+                <div class="contacts__data__text">Лидия Эмильевна, +7(921) 963-55-50</div>
+
+                <div class="contacts__data__title">Арт-директор</div>
+
+                <div class="contacts__data__text">Илиния Ионашко, +7(981) 989-43-30</div>
+              </div>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.399223329974!2d30.32695087687793!3d59.92551746315705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631aa6fc2c20d%3A0xd65433063d727a5a!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0KTQvtC90YLQsNC90LrQuCwgOTDQujEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODA!5e0!3m2!1sru!2sru!4v1713964389177!5m2!1sru!2sru" width="600" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__wrapper">
+          <div class="footer__text">Copyright © 2024. Все права защищены.</div>
+
+          <div class="footer__text">Политика конфиденциальности</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

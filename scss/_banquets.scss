@@ -1,0 +1,106 @@
+.banquets {
+  margin-bottom: 150px;
+
+  @media(max-width: 768px) {
+    margin-bottom: 70px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media(max-width: 1350px) {
+      flex-wrap: wrap;
+      row-gap: 100px;
+      justify-content: space-around;
+    }
+
+    @media(max-width: 510px) {
+      gap: 50px;
+    }
+  }
+
+  picture {
+    align-self: center;
+
+    @media(max-width: 1350px) {
+      order: 2;
+    }
+  }
+
+  &__block-text {
+    max-width: 376px;
+    text-align: center;
+
+    @media(max-width: 1350px) {
+      background-color: $color-bg-3;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    @media (max-width: 510px) {
+      padding: 20px 10px;
+    }
+
+    &_tourists {
+      @media(max-width: 872px) {
+        order: 3;
+      }
+    }
+
+    .banquets__subtitle {
+      @include subtitle;
+    }
+
+    .banquets__title {
+      @include title;
+      margin-bottom: 35px;
+    }
+
+    .banquets__description {
+      margin-bottom: 35px;
+
+      @media (max-width: 510px) {
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      p:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .banquets__link {
+      display: inline-block;
+      width: 152px;
+      height: 47px;
+      text-transform: uppercase;
+      border: 2px solid $color-bg-2;
+      border-radius: 5px;
+      transition: 0.2s;
+      padding-top: 8px;
+
+      &_bottom {
+        @media(max-width: 1350px) {
+          position: relative;
+          top: 25px;
+        }
+
+        @media(max-width: 872px) {
+          top: 0;
+        }
+      }
+
+      &:hover {
+        background-color: $color-bg-2;
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}

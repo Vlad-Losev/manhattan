@@ -1,0 +1,44 @@
+.gallery {
+  text-align: center;
+  margin-bottom: 150px;
+
+  @media(max-width: 768px) {
+    margin-bottom: 70px;
+  }
+ 
+  &__subtitle {
+    @include subtitle;
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 80px;
+
+    @media(max-width: 768px) {
+      margin-bottom: 50px;
+    }
+
+    @media(max-width: 510px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    @include flex(center);
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .gallery__item {
+      cursor: pointer;
+
+      img {
+        transition: 0.3s;
+        
+        &:active {
+          scale: 1.2;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

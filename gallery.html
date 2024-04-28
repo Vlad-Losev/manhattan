@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhattan/Gallery</title>
+  <link rel="stylesheet" href="./css/index.min.css">
+  <script defer src="./scripts/burger-modal.js"></script>
+</head>
+<body>
+  <div class="body__wrapper">
+    <header class="header">
+      <div class="container header__container">
+        <a href="./index.html" class="header__logo-link">
+          <picture>
+            <source srcset="./img/header-logo.webp" type="image/webp">
+            <img src="./img/header-logo.png" alt="Логотип" loading="lazy" width="158" height="40">
+          </picture>
+        </a>
+        
+        <nav class="header__nav">
+          <ul class="header__list" id="menu">
+            <li class="header__item">
+              <a href="./index.html" class="header__item__link">Главная</a>
+            </li>
+
+            <li class="header__item">
+              <a href="./poster.html" class="header__item__link">Афиша</a>
+            </li>
+
+            <li class="header__item">
+              <a href="./events.html" class="header__item__link">Корпоративы</a>
+            </li>
+
+            <li class="header__item">
+              <a href="#" class="header__item__link">Галерея</a>
+            </li>
+
+            <li class="header__item">
+              <a href="./news.html" class="header__item__link">Новости</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="header__btn-link modal__button1">бронирование</a>
+
+        <div class="header__burger" id="burger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <secton class="modal modal1">
+        <div class="modal__main">
+          <h2 class="modal__title">Бронирование столика</h2>
+
+          <p>Бронируйте столик онлайн и получите бокал вина «Шато Тамань» из авторской коллекции бесплатно</p>
+
+          <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+            <fieldset>
+              <input type="date" class="modal__data" required>
+
+              <input type="time" class="modal__time" required>
+
+              <label for="name" >
+                <input type="text" id="name" placeholder="Имя" required>
+              </label>
+
+              <label for="tel">
+                <input type="tel" id="tel" placeholder="Телефон" required>
+              </label>
+            </fieldset>
+
+            <button class="submit" type="submit">Отправить</button>
+          </form>
+
+          <button class="modal__close">&#10006</button>
+        </div>
+      </secton>
+
+      <section class="gallery">
+        <div class="container">
+          <div class="gallery__subtitle">Top “Manhattan” photo</div>
+
+          <h2 class="gallery__title">галерея</h2>
+
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-1.webp" type="image/webp">
+                <img src="./img/gallery-1.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-2.webp" type="image/webp">
+                <img src="./img/gallery-2.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-3.webp" type="image/webp">
+                <img src="./img/gallery-3.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-4.webp" type="image/webp">
+                <img src="./img/gallery-4.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-5.webp" type="image/webp">
+                <img src="./img/gallery-5.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-6.webp" type="image/webp">
+                <img src="./img/gallery-6.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-7.webp" type="image/webp">
+                <img src="./img/gallery-7.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-8.webp" type="image/webp">
+                <img src="./img/gallery-8.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-9.webp" type="image/webp">
+                <img src="./img/gallery-9.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-10.webp" type="image/webp">
+                <img src="./img/gallery-10.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-1.webp" type="image/webp">
+                <img src="./img/gallery-1.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+
+            <li class="gallery__item">
+              <picture>
+                <source srcset="./img/gallery-11.webp" type="image/webp">
+                <img src="./img/gallery-11.png" alt="Фото бара" loading="lazy" width="306" height="350">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="container">
+          <div class="contacts__subtitle">Top “Manhattan” place</div>
+
+          <h2 class="contacts__title">контакты</h2>
+
+          <div class="contacts__flex">
+            <div class="contacts__data">
+              <div class="contacts__data__block">
+                <div class="contacts__data__title">Адрес</div>
+
+                <div class="contacts__data__text">Набережная реки Фонтанки, 90 (вход в арке с белыми колоннами)</div>
+
+                <div class="contacts__data__title">Телефон</div>
+
+                <div class="contacts__data__text">
+                  <a href="tel:+7 812 713-1945">+7 (812) 713-1945</a>
+                </div>
+
+                <div class="contacts__data__title">Режим работы</div>
+
+                <div class="contacts__data__text">Ежедневно с 12:00 до 06:00</div>
+              </div>
+
+              <div class="contacts__data__block">
+                <div class="contacts__data__title">Директор</div>
+
+                <div class="contacts__data__text">Лидия Эмильевна, +7(921) 963-55-50</div>
+
+                <div class="contacts__data__title">Арт-директор</div>
+
+                <div class="contacts__data__text">Илиния Ионашко, +7(981) 989-43-30</div>
+              </div>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.399223329974!2d30.32695087687793!3d59.92551746315705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631aa6fc2c20d%3A0xd65433063d727a5a!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0KTQvtC90YLQsNC90LrQuCwgOTDQujEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODA!5e0!3m2!1sru!2sru!4v1713964389177!5m2!1sru!2sru" width="600" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__wrapper">
+          <div class="footer__text">Copyright © 2024. Все права защищены.</div>
+
+          <div class="footer__text">Политика конфиденциальности</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

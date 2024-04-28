@@ -1,0 +1,183 @@
+$color-bg: #210e09;
+$color-text: #FFF;
+$color-bg-2: #d5621d;
+$color-bg-3: #33160b;
+$color-bg-4: #2a120a;
+
+@mixin flex($jc) {
+  display: flex; 
+  justify-content: $jc;
+  align-items: center;
+}
+
+@mixin title {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @media(max-width: 768px) {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  @media(max-width: 510px) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+@mixin subtitle {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #210E09;
+  background-color: #FFF;
+  border-radius: 5px;
+  padding: 10px 20px 7px;
+  margin-bottom: 40px;
+  
+  @media(max-width: 768px) {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 6px 2px;
+    margin-bottom: 20px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+.body__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 72px;
+  margin: 0 auto;
+
+  @media(max-width: 1024px) {
+    padding: 0 50px;
+  }
+
+  @media(max-width: 768px) {
+    padding: 0 30px;
+  }
+
+  @media(max-width: 510px) {
+    padding: 0 15px;
+  }
+}
+
+// Модальное окно
+.modal__button1 {
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 20px;
+  overflow-y: auto;
+  display: none;
+  transition: 0.2s;
+  z-index: 50;
+
+  &__main {
+    position: relative;
+    max-width: 560px;
+    background-color: $color-bg;
+    margin: auto;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 30px;cursor: default;
+
+    .modal__title {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .modal__close {
+      background-color: transparent;
+      color: #FFF;
+      border: none;
+      cursor: pointer;
+      font-size: 22px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      outline: 1px solid transparent;
+      outline-offset: 3px;
+      transition: outline-color .15s ease-in-out;
+      border-radius: 3px;
+      padding: 0;
+      text-align: center;
+      display: block;
+      width: 30px;
+      height: 30px;
+
+      &:focus-visible {
+        outline-color: $color-bg-2;
+      }
+    }
+
+    .modal__form {
+      text-align: center;
+      
+      fieldset {
+        @include flex(center);
+        flex-wrap: wrap;
+        gap: 20px;
+        background-color: $color-bg-4;
+        border: 0;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      input, .submit {
+        width: 200px;
+        height: 50px;
+        color: #FFF;
+        background-color: $color-bg-3;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: border 0.2s;
+        padding: 0 10px;
+
+        &::placeholder {
+          color: #FFF;
+        }
+
+        &:hover {
+          border: 1px solid $color-bg-2;
+        }
+      }
+    }
+  }
+}
