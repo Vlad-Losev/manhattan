@@ -2052,9 +2052,9 @@ body {
 }
 .rider .accordeon .box .content {
   position: relative;
-  overflow: hidden;
   max-height: 0;
-  transition: 0.3s;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 .rider .accordeon .box .content ul {
   list-style-type: disc;
@@ -2080,6 +2080,7 @@ body {
 }
 .rider .accordeon .active .label {
   background-color: #d5621d;
+  max-height: 500px;
 }
 .rider .accordeon .active .label::after {
   transform: rotate(180deg);

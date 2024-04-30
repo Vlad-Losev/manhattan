@@ -65,24 +65,66 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Аккордеон
-const boxes = document.querySelectorAll('.box');
+// const boxes = document.querySelectorAll('.box');
 
-boxes.forEach((box) => {
-  box.addEventListener('click', boxHandler);
+// boxes.forEach((box) => {
+//   box.addEventListener('click', boxHandler);
+// });
+
+// function boxHandler(e) {
+//   e.preventDefault();
+//   let currentBox = e.target.closest('.box');
+//   let currentContent = e.target.nextElementSibling;
+//   currentBox.classList.toggle('active');
+
+//   if (currentBox.classList.contains('active')) {
+//     currentContent.style.maxHeight = currentContent.scrollHeight + 'px';
+//   } else {
+//     currentContent.style.maxHeight = 0;
+//   }
+// }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const accordionItems = document.querySelectorAll(".box");
+
+  accordionItems.forEach(item => {
+    const accordionHeader = item.querySelector(".label");
+    const accordionContent = item.querySelector(".content");
+
+    accordionHeader.addEventListener("click", function() {
+      // Закрываем все вкладки, кроме текущей
+      accordionItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains("active")) {
+          otherItem.classList.remove("active");
+          const otherContent = otherItem.querySelector(".content");
+          otherContent.style.maxHeight = null;
+        }
+      });
+
+      if (item.classList.contains("active")) {
+        item.classList.remove("active");
+        accordionContent.style.maxHeight = null;
+      } else {
+        item.classList.add("active");
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      }
+    });
+  });
+
+  // Закрываем вкладки при клике за пределы аккордеона
+  document.addEventListener("click", function(event) {
+    const isOutsideAccordion = !event.target.closest(".accordeon");
+    if (isOutsideAccordion) {
+      accordionItems.forEach(item => {
+        if (item.classList.contains("active")) {
+          item.classList.remove("active");
+          const content = item.querySelector(".content");
+          content.style.maxHeight = null;
+        }
+      });
+    }
+  });
 });
-
-function boxHandler(e) {
-  e.preventDefault();
-  let currentBox = e.target.closest('.box');
-  let currentContent = e.target.nextElementSibling;
-  currentBox.classList.toggle('active');
-
-  if (currentBox.classList.contains('active')) {
-    currentContent.style.maxHeight = currentContent.scrollHeight + 'px';
-  } else {
-    currentContent.style.maxHeight = 0;
-  }
-}
 
 // Модальное окно
 const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
